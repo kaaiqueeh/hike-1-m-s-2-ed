@@ -2,24 +2,36 @@
   <title>rede-hike2</title>
 </head>
 
-<body>
-  <h1>Bem vind@s à Hike!</h1>
-
-  {{> hello}}
-  {{> info}}
-</body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="Inicio">
+ 
+  <h1>Conecte-se com o mundo.</h1>
+  <p>Veja fotos e status das pessoas que segue.</p>
+  <p>Compartilhe as novidades no seu perfil</p>
+  <p>Siga seus amigos ao redor do mundo</p>
+  <p> <a href="sobre">link</a></p>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="sobre">
+
+  <h1>Sobre</h1>
+  <h2>Nossa Visão</h2>
+  <p> Escrever é esquecer. A literatura é a maneira mais agradável de ignorar a vida. A música embala, as artes visuais animam, as artes vivas (como a dança e a arte de representar) entretêm. A primeira, porém, afasta-se da vida por fazer dela um sono; as segundas, contudo, não se afastam da vida - umas porque usam de fórmulas visíveis e portanto vitais, outras porque vivem da mesma vida humana. 
+Não é o caso da literatura. Essa simula a vida. Um romance é uma história do que nunca foi e um drama é um romance dado sem narrativa. Um poema é a expressão de ideias ou de sentimentos em linguagem que ninguém emprega, pois que ninguém fala em verso.</p>
+  <h2>Nossos Valores</h2>
+  <p> Que a força do medo que tenho
+Não me impeça de ver o que anseio;
+Que a morte de tudo em que acredito
+Não me tape os ouvidos e a boca; 
+Porque metade de mim é o que eu grito,
+Mas a outra metade é silêncio...</p>
+</template>
+
+<template name="cabecalho">
+  <a href="/sobre">sobre</a>
+  <a href="/">Inicio</a>
+</template>
+
+<template name="LayoutPrincipal">
+  {{> cabecalho}}
+  {{> Template.dynamic template=main}}
 </template>
